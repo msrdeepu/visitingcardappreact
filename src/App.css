@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .form {
+    height: 80%;
+  }
+  .card {
+    margin: 5px;
+  }
+}

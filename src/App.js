@@ -42,55 +42,58 @@ function App() {
                 backgroundColor: "purple",
                 borderStyle: "solid",
                 borderColor: "white",
+                fontSize: { xs: "18px", md: "40px" },
               }}
             >
               Create Your Digital Visiting Card
             </Typography>
           </Box>
-          <form>
-            <TextField
-              type="text"
-              onChange={nameHandleChange}
-              id="standard-basic"
-              label="Name"
-              variant="standard"
-              sx={{ margin: "8px", maxWidth: "100%", color: "white" }}
-            />
-            <TextField
-              type="number"
-              onChange={contactHandleChange}
-              id="standard-basic"
-              label="Contact No:"
-              variant="standard"
-              sx={{ margin: "8px", maxWidth: "100%" }}
-            />
-            <TextField
-              type="email"
-              onChange={emailHandleChange}
-              id="standard-basic"
-              label="Email"
-              variant="standard"
-              sx={{ margin: "8px", maxWidth: "100%" }}
-            />
-            <TextField
-              type="text"
-              onChange={professionHandleChange}
-              id="standard-basic"
-              label="Profession"
-              variant="standard"
-              sx={{ margin: "8px", maxWidth: "100%" }}
-            />
-            <TextField
-              type="text"
-              onChange={addressHandleChange}
-              id="standard-basic"
-              label="Address"
-              variant="standard"
-              sx={{ margin: "8px", maxWidth: "100%" }}
-            />
-            <br />
-            <DownloadButton />
-          </form>
+          <Box>
+            <form className="form">
+              <TextField
+                type="text"
+                onChange={nameHandleChange}
+                id="standard-basic"
+                label="Name"
+                variant="standard"
+                sx={{ margin: "8px", maxWidth: "100%", color: "white" }}
+              />
+              <TextField
+                type="number"
+                onChange={contactHandleChange}
+                id="standard-basic"
+                label="Contact No:"
+                variant="standard"
+                sx={{ margin: "8px", maxWidth: "100%" }}
+              />
+              <TextField
+                type="email"
+                onChange={emailHandleChange}
+                id="standard-basic"
+                label="Email"
+                variant="standard"
+                sx={{ margin: "8px", maxWidth: "100%" }}
+              />
+              <TextField
+                type="text"
+                onChange={professionHandleChange}
+                id="standard-basic"
+                label="Profession"
+                variant="standard"
+                sx={{ margin: "8px", maxWidth: "100%" }}
+              />
+              <TextField
+                type="text"
+                onChange={addressHandleChange}
+                id="standard-basic"
+                label="Address"
+                variant="standard"
+                sx={{ margin: "8px", maxWidth: "100%" }}
+              />
+              <br />
+              <DownloadButton />
+            </form>
+          </Box>
         </Box>
       </Box>
       <Box
@@ -102,7 +105,12 @@ function App() {
           alignItems: "center",
         }}
       >
-        <div class="card">
+        <Box
+          sx={{
+            marginTop: { xs: "20%", md: "5%" },
+          }}
+          className="card"
+        >
           <h1>{name}</h1>
           <p>{profession}</p>
           <div class="contact-info">
@@ -126,7 +134,7 @@ function App() {
               </Typography>
             </Typography>
           </div>
-        </div>
+        </Box>
 
         <Typography>
           Copyright &copy;{" "}
